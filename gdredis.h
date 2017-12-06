@@ -3,6 +3,10 @@
 #ifndef GD_REDIS
 #define GD_REDIS
 
+#include <cpp_redis/cpp_redis>
+#include <iostream>
+#include <memory>
+
 #include "reference.h"
 #include "ustring.h"
 

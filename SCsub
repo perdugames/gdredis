@@ -2,5 +2,6 @@
 Import('env')
 
 local_env = env.Clone()
+local_env.Append(CPPPATH=['#/usr/local/include'])
 local_env.add_source_files(env.modules_sources,"*.cpp")
-local_env.Append(LIBS=['cpp_redis', 'tacopie'])
+local_env.Append(LIBS=['cpp_redis', 'tacopie'], LIBPATH="/usr/local/lib", LINKFLAGS="--static")
