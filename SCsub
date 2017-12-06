@@ -1,0 +1,6 @@
+# SCsub
+Import('env')
+
+local_env = env.Clone()
+local_env.add_source_files(env.modules_sources,"*.cpp")
+local_env.Append(LIBS=['cpp_redis', 'tacopie'])
