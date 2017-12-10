@@ -103,7 +103,7 @@ For questions about redis methods, go to the link https://redis.io/commands/ and
 `gdredis` is under [MIT License](LICENSE).
 
 ## Special Thanks
-Thanks to [@Cylix](https://github.com/Cylix/) for sharing the library  [cpp_redis](https://github.com/Cylix/cpp_redis) that was used in gdredis
+Thanks to [@Cylix](https://github.com/Cylix/) for sharing the library  [cpp_redis](https://github.com/Cylix/cpp_redis) that was used in gdredis.
 
 ## Author
 [perdugames](https://github.com/PerduGames/)
