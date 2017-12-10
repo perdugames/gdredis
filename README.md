@@ -1,5 +1,5 @@
 <p align="center">
-   <img src="https://raw.githubusercontent.com/PerduGames/gdredis/master/assets/images/godot-redis.png"/>
+   <img src="https://raw.githubusercontent.com/PerduGames/gdredis/cpp_redis/assets/images/godot-redis.png"/>
 </p>
 
 
