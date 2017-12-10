@@ -1,7 +1,32 @@
 # SCsub
 Import('env')
 
-local_env = env.Clone()
-local_env.Append(CPPPATH=['#/usr/local/include'])
-local_env.add_source_files(env.modules_sources,"*.cpp")
-local_env.Append(LIBS=['cpp_redis', 'tacopie'], LIBPATH="/usr/local/lib", LINKFLAGS="--static")
+env.Append(CPPPATH=['cpp_redis/includes/cpp_redis', 'cpp_redis/tacopie/includes/tacopie', '.'])
+src_list = Split("""gdredis.cpp
+                    register_types.cpp
+                    cpp_redis/sources/builders/array_builder.cpp
+                    cpp_redis/sources/builders/builders_factory.cpp
+                    cpp_redis/sources/builders/bulk_string_builder.cpp
+                    cpp_redis/sources/builders/error_builder.cpp
+                    cpp_redis/sources/builders/integer_builder.cpp
+                    cpp_redis/sources/builders/reply_builder.cpp
+                    cpp_redis/sources/builders/simple_string_builder.cpp
+                    cpp_redis/sources/core/client.cpp
+                    cpp_redis/sources/core/reply.cpp
+                    cpp_redis/sources/core/sentinel.cpp
+                    cpp_redis/sources/core/subscriber.cpp
+                    cpp_redis/sources/misc/logger.cpp
+                    cpp_redis/sources/network/redis_connection.cpp
+                    cpp_redis/sources/network/tcp_client.cpp
+                    cpp_redis/tacopie/sources/network/common/tcp_socket.cpp
+                    cpp_redis/tacopie/sources/network/unix/unix_self_pipe.cpp
+                    cpp_redis/tacopie/sources/network/unix/unix_tcp_socket.cpp
+                    cpp_redis/tacopie/sources/network/windows/windows_self_pipe.cpp
+                    cpp_redis/tacopie/sources/network/windows/windows_tcp_socket.cpp
+                    cpp_redis/tacopie/sources/network/io_service.cpp
+                    cpp_redis/tacopie/sources/network/tcp_client.cpp
+                    cpp_redis/tacopie/sources/network/tcp_server.cpp
+                    cpp_redis/tacopie/sources/utils/error.cpp
+                    cpp_redis/tacopie/sources/utils/logger.cpp
+                    cpp_redis/tacopie/sources/utils/thread_pool.cpp""")
+env.add_source_files(env.modules_sources, src_list)
