@@ -20,7 +20,6 @@ void register_gdredis_types() {
 
       if (WSAStartup(version, &data) != 0) {
         std::cerr << "WSAStartup() failure" << std::endl;
-        return -1;
       }
     #endif /* _WIN32 */
 
